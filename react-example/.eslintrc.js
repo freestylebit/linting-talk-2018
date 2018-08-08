@@ -6,9 +6,9 @@ module.exports = {
     "extends": "eslint:recommended",
     "parserOptions": {
         "ecmaFeatures": {
-            "experimentalObjectRestSpread": true,
             "jsx": true
         },
+        "ecmaVersion": 6,
         "sourceType": "module"
     },
     "plugins": [
@@ -17,7 +17,7 @@ module.exports = {
     "rules": {
         "indent": [
             "error",
-            4
+            2
         ],
         "linebreak-style": [
             "error",
@@ -30,6 +30,9 @@ module.exports = {
         "semi": [
             "error",
             "always"
-        ]
+        ],
+        "no-unused-vars": "off",
+        "no-undef": "off",
+        "no-console": "off",
     }
 };
