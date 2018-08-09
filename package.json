@@ -18,5 +18,21 @@
   "homepage": "https://github.com/freestylebit/linting-talk-2018#readme",
   "devDependencies": {
     "eslint": "^5.3.0"
+  },
+  "dependencies": {
+    "husky": "^1.0.0-rc.13",
+    "lint-staged": "^7.2.0",
+    "prettier": "^1.14.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
